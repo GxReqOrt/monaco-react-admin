@@ -1,0 +1,93 @@
+{
+  "name": "monaco-react-admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^6.2.0",
+    "monaco-editor": "0.25.2",
+    "ra-data-json-server": "^3.17.0",
+    "react": "^17.0.2",
+    "react-admin": "^3.17.0",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "vscode-oniguruma": "1.3.0",
+    "vscode-textmate": "5.1.1",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "lint": "eslint ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "plugin:react/recommended",
+      "plugin:import/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "prefer-arrow-functions"
+    ],
+    "rules": {
+      "camelcase": "error",
+      "import/named": 0,
+      "import/order": "error",
+      "import/no-named-as-default-member": 0,
+      "react/default-props-match-prop-types": "error",
+      "react/jsx-pascal-case": "error",
+      "react/no-multi-comp": "error",
+      "prefer-arrow-callback": "error",
+      "prefer-arrow-functions/prefer-arrow-functions": [
+        "error",
+        {
+          "classPropertiesAllowed": false,
+          "disallowPrototype": false,
+          "returnStyle": "unchanged",
+          "singleReturnOnly": false
+        }
+      ],
+      "prefer-const": "error"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^12.1.4",
+    "commitlint": "^12.1.4",
+    "copy-webpack-plugin": "^6.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prefer-arrow-functions": "^3.0.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^4.3.8",
+    "monaco-editor-webpack-plugin": "^4.1.1",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5",
+    "wasm-loader": "^1.3.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn lint"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
